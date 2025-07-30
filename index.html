@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quotes App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Quotes Collection</h1>
+    <div class="quotes">
+        {% for quote in quotes %}
+        <div class="quote-box">
+            <p>"{{ quote.quote }}"</p>
+            <p><strong>— {{ quote.author }}</strong></p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
